@@ -240,7 +240,7 @@ const AboutPage = () => {
                   />
                 </div>
                 <div>
-                  <p className="font-semibold">2017-2018</p>
+                  <p className="font-semibold">2019-2020</p>
                   <h3 className="font-bold text-[20px] text-clip">
                     Higher Secondary Certificate
                   </h3>
