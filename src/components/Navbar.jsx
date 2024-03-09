@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import NavLink from "./NavLink";
 import {motion} from "framer-motion";
@@ -93,13 +93,16 @@ const Navbar = () => {
 
       {/* Social Links */}
       <div className="hidden md:flex gap-4 w-1/3">
-        <Link href="#">
+        <Link
+          href="https://www.linkedin.com/in/sanjay-nathwani-07656020a/"
+          target="__blank"
+        >
           <Image src="/linkedin.png" alt="linkedin" width={24} height={24} />
         </Link>
-        <Link href="#">
+        <Link href="https://github.com/Sanjay-Nathwani" target="__blank">
           <Image src="/github.png" alt="github" width={24} height={24} />
         </Link>
-        <Link href="#">
+        <Link href="https://www.instagram.com/sanju_16_10/" target="__blank">
           <Image src="/instagram.png" alt="instagram" width={24} height={24} />
         </Link>
       </div>
@@ -135,10 +138,13 @@ const Navbar = () => {
             variants={listVariants}
             initial="closed"
             animate="opened"
-            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-40"
+            className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-8 text-4xl z-50"
           >
             {links.map((link) => (
-              <motion.div variants={listItemVariants} key={link.title} className="">
+              <motion.div
+                variants={listItemVariants}
+                key={link.title}
+              >
                 <Link href={link.url}>{link.title}</Link>
               </motion.div>
             ))}
